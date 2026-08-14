@@ -1,0 +1,26 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+
+  // Tailwind 4 keeps its config in CSS, so tell the CSS language
+  // server not to flag @import "tailwindcss" and @theme as errors.
+  "css.lint.unknownAtRules": "ignore",
+  "tailwindCSS.includeLanguages": { "javascript": "javascript" },
+  "tailwindCSS.experimental.classRegex": [
+    ["className=\"([^\"]*)", "([a-zA-Z0-9\\-:/\\[\\]\\.%]+)"]
+  ],
+
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+  "files.exclude": { "**/node_modules": true, "**/dist": true },
+
+  // Checks GitHub periodically and flags when the remote has moved ahead.
+  "git.autofetch": true,
+  "git.confirmSync": false
+
+  // To make every commit push automatically (and therefore deploy),
+  // add this line above:
+  //   "git.postCommitCommand": "push"
+  // Left off on purpose — see ACCOUNTS.md, Part 4.
+}
